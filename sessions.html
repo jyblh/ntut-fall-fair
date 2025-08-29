@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>2025 秋季徵才說明會（10/13–10/16）</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #fdfaf6;
+      margin: 0;
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+      color:#333;
+    }
+    .title {
+      font-size: 24px; font-weight: 700; color: #4b5e2e;
+      border-left: 6px solid #688b3e; padding-left: 12px; margin-bottom: 16px;
+    }
+    .tabs {
+      display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;
+    }
+    .tab-btn {
+      border:1px solid #688b3e; background:#fff; color:#4b5e2e;
+      padding:8px 14px; border-radius:999px; cursor:pointer; font-weight:600;
+    }
+    .tab-btn.active { background:#688b3e; color:#fff; }
+    .infoBar {
+      display:flex; align-items:center; background-color:#e9efe3; padding:12px 20px;
+      border-radius:12px; margin-bottom:20px; gap:12px;
+    }
+    .pill {
+      background:#4b5e2e; color:white; padding:8px 16px; border-radius:999px; font-weight:bold;
+    }
+    #cardGrid {
+      display:grid; grid-template-columns: repeat(2, 1fr); gap:24px;
+    }
+    .card {
+      background:white; padding:8px 16px 12px; border-left:6px solid #688b3e;
+      border-radius:10px; box-shadow:0 1px 6px rgba(0,0,0,0.06);
+      display:flex; flex-direction:column; max-height:320px;
+    }
+    .scroll-content {
+      overflow-y:auto; flex-grow:1; padding-right:6px; line-height:1.8; font-size:15px;
+    }
+    .tag {
+      display:inline-block; background-color:#dbe3cd; color:#333; font-size:14px;
+      border-radius:999px; padding:4px 12px; margin-top:8px; margin-right:6px;
+    }
+    .day-badge {
+      display:inline-block; font-size:12px; background:#eef3e8; border:1px solid #c9d7b8;
+      border-radius:6px; padding:2px 6px; margin-left:8px;
+    }
+    @media (max-width: 720px) {
+      #cardGrid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="title">2025 秋季徵才說明會</div>
+
+  <div class="tabs" id="tabs"></div>
+  <div class="infoBar" id="infoBar"></div>
+  <div id="cardGrid"></div>
+
+  <script>
+    const data = [{"dateISO":"2025-10-12T16:00:00.000Z","location":"綜合科館第二演講廳","cards":[{"time":"12:10-13:00","company":"世界先進積體電路股份有限公司","intro":"世界先進積體電路股份有限公司於1994年成立於新竹科學園區，專注特殊積體電路製造。","advantage":"持續精進製程技術與生產效能，提供高附加價值解決方案，並於台灣與新加坡佈局。","welfare":"世界先進提供領先業界的薪資與完善福利，適合長期發展的職場。","bonus":"","department":"機械工程系, 電機工程系, 電子工程系, 資訊工程系, 化學工程與生物科技系, 工業工程與管理系"},{"time":"13:30-14:20","company":"大立光電股份有限公司","intro":"1987年成立，總部位於台中南屯精密機械園區，專注精密光學塑膠鏡頭研發與製造。","advantage":"產品廣泛應用於手機、平板、汽車等，擁有10座廠區與2座新建中廠區。","welfare":"年薪15個月、員工分紅、餐飲補助、健康檢查、保險與退休制度完善。","bonus":"入場同學有機會獲得\n輕食餐點兌換券","department":"自動化科技研究所, 機械工程系, 電機工程系, 電子工程系, 光電工程系, 資訊工程系"},{"time":"14:50-15:40","company":"香港商科迪亞洲有限公司台灣分公司","intro":"香港商科迪亞洲有限公司專注於建築領域調試管理與技術服務，優化建築系統運作。","advantage":"業務遍及亞太地區，拓展多國市場，累積豐富專案經驗，具國際競爭力。","welfare":"勞健保、勞退、特休假、團體保險、員工進修假及不定期聚餐。","bonus":"","department":"機械工程系, 能源與冷凍空調工程系, 電機工程系, 環境工程與管理研究所, 材料及資源工程系, 建築系"},{"time":"16:10-17:00","company":"Career Talk","intro":"從零開始打造你的 LinkedIn 增加競爭力力！不知道從哪裡開始準備踏入職場嗎？本次秋季說明會特別邀請專業顧問，帶你從 LinkedIn 個人檔案建立到面試全攻略，一步一步拆解成功求職的關鍵。","advantage":"不論你是求職新手，或是準備邁向下一個職涯階段，這場講座都將幫助你打造 專屬的職涯競爭力，讓你的 LinkedIn 與面試表現成為進入理想企業的最佳通行證！","welfare":"課程內容包含：\n\n1.LinkedIn 打造技巧：從零開始建立你的個人履歷\n\n2.面試準備與禮儀：從服裝禮儀到進行面試上應答的技巧\n\n3.商務溝通：進入職場後信件回覆注意要點，撰寫面試後感謝信\n\n4.實戰 Q&A：分享易上手的面試模板、如何針對職缺準備內容。","bonus":"","department":"不限科系"}]},{"dateISO":"2025-10-13T16:00:00.000Z","location":"綜合科館第二演講廳","cards":[{"time":"12:10-13:00","company":"廣達電腦股份有限公司","intro":"廣達電腦成立於1988年，為全球筆記型電腦研發製造領導廠商，持續拓展AI與5G布局。","advantage":"跨足雲端、智慧醫療、智慧交通等領域，積極創新，重視人才培育，驅動企業發展。","welfare":"年終獎金、員工分紅、健康檢查、交通津貼、伙食補助及多元自選福利方案。","bonus":"","department":"不限科系"},{"time":"13:30-14:20","company":"工業技術研究院","intro":"工研院以科技研發帶動產業發展，聚焦智慧生活、健康樂活、永續環境與韌性社會四大領域。","advantage":"市場導向研發，提供創新解決方案，引領產業升級，創造社會福祉與新市場機會。","welfare":"完善宿舍、休閒設施、營養餐廳及託嬰服務，打造兼顧工作與生活的研究環境。","bonus":"前100名入場，可得精美禮品一份","department":"電機工程系, 電子工程系, 光電工程系, 資訊工程系, 材料科學與工程研究所, 化學工程與生物科技系"},{"time":"14:50-15:40","company":"叡揚資訊股份有限公司","intro":"成立於1987年，專注企業資訊化服務，提供多元雲端SaaS產品，為台灣領先供應商。","advantage":"從系統效能提升到雲端服務，持續創新，協助企業數位轉型與營運升級。","welfare":"年終分紅、員工獎金、教育訓練、健康檢查、各式社團與休閒活動。","bonus":"","department":"資訊工程系, 資訊與財金管理系, 經營管理系, 不限科系"},{"time":"16:10-17:00","company":"智安數據科技股份有限公司","intro":"智安數據是一家專業軟體研發公司，專注數據收集與智慧分析，提供資訊安全解決方案。","advantage":"結合機器學習與創新科技，協助企業建立智慧化安全管理，提升競爭優勢。","welfare":"團保、績效獎金、旅遊補助、彈性工時、教育訓練及國內外旅遊活動。","bonus":"","department":"自動化科技研究所, 資訊工程系, 資訊與財金管理系, 互動設計系"}]},{"dateISO":"2025-10-14T16:00:00.000Z","location":"綜合科館第二演講廳","cards":[{"time":"12:10-13:00","company":"台灣積體電路製造股份有限公司","intro":"台積公司為全球最大專業積體電路製造服務公司，持續引領半導體產業創新發展。","advantage":"專注高效能運算、智慧型手機、物聯網與車用電子領域，研發與產能領先全球。","welfare":"具競爭力薪酬、年終獎金、分紅制度，與員工共享公司營運成果。","bonus":"","department":"不限科系"},{"time":"13:30-14:20","company":"台達電子工業股份有限公司","intro":"台達創立於1971年，從零組件製造跨足整體節能解決方案，持續引領產業創新。","advantage":"以電源、交通、自動化等領域布局八大事業群，提供完整解決方案並拓展全球市場。","welfare":"黃金旅遊假、育兒津貼、三餐補助、旅遊補助與多元員工活動，福利完善。","bonus":"將提供給與講者互動的同學台達精美小禮品","department":"不限科系"},{"time":"14:50-15:40","company":"巨漢系統科技股份有限公司","intro":"巨漢成立於1989年，專營空調與水電工程，提供快速周全的一站式專業服務。","advantage":"引進PLM、ERP、BIM等技術，持續朝綠能建築發展，致力打造安全人性化工程。","welfare":"年終分紅、健康檢查、進修補助、津貼補助及多元員工活動，支持全方位成長。","bonus":"","department":"機械工程系, 能源與冷凍空調工程系, 電機工程系"},{"time":"16:10-17:00","company":"安倉營造股份有限公司","intro":"安倉營造為甲級營造廠，參與多項國家重大工程，專注品質、效率與永續經營。","advantage":"專業營建團隊，培育人才，優化管理效能，致力於公共工程的高品質交付。","welfare":"團體保險、健康檢查、多元津貼、社團活動及新鮮人專屬培訓，福利完善。","bonus":"互動遊戲優勝前10名可得100元禮券","department":"土木工程系, 環境工程與管理研究所, 建築系"}]},{"dateISO":"2025-10-15T16:00:00.000Z","location":"綜合科館第二演講廳","cards":[{"time":"12:10-13:00","company":"美超微電腦股份有限公司","intro":"美超微電腦為高效能伺服器與儲存系統領導廠商，專注雲端、AI及HPC領域。","advantage":"模組化設計與液冷技術創新，兼顧效能與節能，成為AI基礎設施領導品牌。","welfare":"具競爭力薪資、教育訓練、特休給假、免費午餐、旅遊補助及多元員工活動。","bonus":"QA互動禮品","department":"自動化科技研究所, 電機工程系, 電子工程系, 資訊工程系, 工業工程與管理系"},{"time":"13:30-14:20","company":"兆豐國際商業銀行","intro":"本行專精國際貿易、外匯、聯貸與專案融資，於國內外布局廣泛，具領導地位。","advantage":"積極推動公司治理與永續發展，擁有國內108家分行與海外39處據點。","welfare":"月薪、獎金、健檢、團體保險、員工貸款優惠及子女教育補助。","bonus":"報名參加均可得不鏽鋼吸管組1份。","department":"不限科系"},{"time":"14:50-15:40","company":"久鼎金屬實業股份有限公司","intro":"久鼎自1996年專研自行車與電動車製造，持續創新，推出多元電動滑板車與專利產品。","advantage":"專注高效能與環保設計，累積700多項專利，產品符合未來生活與市場趨勢。","welfare":"年終獎金、節日禮金、健康檢查、旅遊與運動補助及多元員工活動。","bonus":"資料夾和滑板車吊飾","department":"機械工程系, 電機工程系, 工業設計系"},{"time":"16:10-17:00","company":"彩虹互動科技有限公司","intro":"彩虹互動科技成立於2014年，專注研發與發行熱門手機遊戲，業務遍及80多國。","advantage":"全球佈局，重視自由與創新，營造輕鬆活潑的新創工作氛圍，激發研發潛力。","welfare":"健康檢查、零食飲料供應、調薪機會、員工旅遊、進修補助及內部活動。","bonus":"前30位入場者可以獲得100元統一禮券","department":"電機工程系, 電子工程系, 資訊工程系, 資訊與財金管理系, 互動設計系, 文化事業發展系"}]}];
+    const weekdayMap = ['日','一','二','三','四','五','六'];
+
+    // 產生日期籤 + 「全部」
+    const tabs = document.getElementById('tabs');
+    const allBtn = document.createElement('button');
+    allBtn.className = 'tab-btn';
+    allBtn.textContent = '全部';
+    allBtn.onclick = () => renderAll();
+    tabs.appendChild(allBtn);
+
+    data.forEach((d, i) => {
+      const date = new Date(d.dateISO);
+      const btn = document.createElement('button');
+      btn.className = 'tab-btn';
+      btn.dataset.index = i;
+      btn.textContent = (date.getMonth()+1) + '/' + date.getDate() + '（' + weekdayMap[date.getDay()] + '）';
+      btn.onclick = () => selectDay(i);
+      tabs.appendChild(btn);
+    });
+
+    function setActiveTab(idx) {
+      [...document.querySelectorAll('.tab-btn')].forEach((b, i) => {
+        b.classList.toggle('active', (idx === 'all' && i===0) || (idx !== 'all' && Number(b.dataset.index)===idx));
+      });
+      if (idx === 'all') {
+        // 強制第一顆(全部) active
+        document.querySelector('.tab-btn').classList.add('active');
+      }
+    }
+
+    function renderInfoBar(dayIdx) {
+      const bar = document.getElementById('infoBar');
+      if (dayIdx === 'all') {
+        bar.innerHTML = '<div class="pill">10/13–10/16（共 4 天）</div><div>地點：綜合科館第二演講廳</div>';
+        return;
+      }
+      const item = data[dayIdx];
+      const date = new Date(item.dateISO);
+      const wk = weekdayMap[date.getDay()];
+      bar.innerHTML =
+        '<div class="pill">' + (date.getMonth()+1) + '/' + date.getDate() + '（' + wk + '）</div>' +
+        '<div>地點：' + item.location + '</div>';
+    }
+
+    function renderCards(items, withDayBadge = false) {
+      const grid = document.getElementById('cardGrid');
+      grid.innerHTML = '';
+      items.forEach(obj => {
+        const div = document.createElement('div');
+        div.className = 'card';
+        let titleLine = '<h3 style="font-size:20px; margin-bottom:10px; color:#4b5e2e;">' + obj.company + '</h3>';
+        if (withDayBadge && obj.__dayLabel) {
+          titleLine = titleLine.replace('</h3>', '<span class="day-badge">' + obj.__dayLabel + '</span></h3>');
+        }
+        let content = titleLine;
+        if (obj.time) content += '<div style="font-size:15px; margin-bottom:10px;"><strong>⏰時間：</strong>' + obj.time + '</div>';
+        content += '<div class="scroll-content"><ul>';
+        if (obj.intro) content += '<li><strong>企業介紹：</strong>' + obj.intro + '</li>';
+        if (obj.advantage) content += '<li><strong>企業優勢：</strong>' + obj.advantage + '</li>';
+        if (obj.welfare) content += '<li><strong>福利政策：</strong>' + obj.welfare + '</li>';
+        if (obj.bonus) content += '<li><strong>企業加碼：</strong>' + obj.bonus + '</li>';
+        content += '</ul></div>';
+        if (obj.department) {
+          const tags = obj.department.split(/[、,，\s]+/);
+          content += '<div style="margin-top:10px;">';
+          tags.forEach(tag => { if (tag.trim()) content += '<div class="tag">' + tag.trim() + '</div>'; });
+          content += '</div>';
+        }
+        div.innerHTML = content;
+        grid.appendChild(div);
+      });
+    }
+
+    function selectDay(i) {
+      setActiveTab(i);
+      renderInfoBar(i);
+      renderCards(data[i].cards);
+    }
+
+    function renderAll() {
+      setActiveTab('all');
+      renderInfoBar('all');
+      // 把四天攤平成一個陣列，並在卡片上加上小日期標籤
+      const merged = [];
+      data.forEach(d => {
+        const date = new Date(d.dateISO);
+        const label = (date.getMonth()+1) + '/' + date.getDate() + '（' + weekdayMap[date.getDay()] + '）';
+        d.cards.forEach(c => merged.push({ ...c, __dayLabel: label }));
+      });
+      renderCards(merged, true);
+    }
+
+    // 預設顯示第一天
+    selectDay(0);
+  </script>
+</body>
+</html>
